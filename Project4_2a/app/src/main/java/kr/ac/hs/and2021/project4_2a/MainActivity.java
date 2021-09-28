@@ -1,3 +1,7 @@
+/*
+ 라디오 버튼을 이용해서 사진을 입력받는다. 
+ */
+
 package kr.ac.hs.and2021.project4_2a;
 
 import androidx.appcompat.app.AppCompatActivity;
