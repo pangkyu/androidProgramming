@@ -4,15 +4,53 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context=".MainActivity">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+    <Button
+        android:id = "@+id/button1"
+        android:layout_width="110dp"
+        android:layout_height="110dp"
+        android:layout_gravity="right"
+        android:text="버튼1"/>
+
+
+    <Button
+        android:id = "@+id/button2"
+        android:layout_width="110dp"
+        android:layout_height="110dp"
+        android:layout_gravity="center"
+        android:text="버튼2"/>
+
+
+    <Button
+        android:id = "@+id/button3"
+        android:layout_width="110dp"
+        android:layout_height="110dp"
+        android:layout_gravity="left
+"
+        android:text="버튼3"/>
+
+    <LinearLayout
+        android:layout_gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+
+        <Button
+            android:text = "Button1"
+            android:layout_width = "wrap_content"
+            android:layout_height="wrap_content"/>
+        <Button
+         android:text = "Button2"
+         android:layout_width = "wrap_content"
+         android:layout_height="wrap_content"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
 
 </LinearLayout>
