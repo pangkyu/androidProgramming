@@ -32,7 +32,7 @@ public class MainActivity extends AppCompatActivity {
         picture = (ImageView) findViewById(R.id.picture);
         picture.setImageResource(R.drawable.pic1);
 
-        int length = ImageId.length;
+
 
         clickBtn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -42,14 +42,7 @@ public class MainActivity extends AppCompatActivity {
                 if(i == ImageId.length){
                     i = 0;
                 }
-//                i = 1 - i;
-//                if ( i == 0){
-//                    picture.setImageResource(R.drawable.pic1);
-//                }else if ( i == 1){
-//                    picture.setImageResource(R.drawable.pic2);
-//                }else{
-//                    picture.setImageResource(R.drawable.pic3);
-//                }
+
             }
         });
 
