@@ -4,13 +4,19 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context=".MainActivity">
+
 
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="이름 : 배성규"/>
+        android:text="이름 : 배성규" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="201758101" />
     <RadioGroup
         android:layout_width="wrap_content"
         android:layout_height="wrap_content">
@@ -18,6 +24,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/grade1"
+            android:enabled="false"
             android:text = "1학년">
 
         </RadioButton>
@@ -25,6 +32,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/grade2"
+            android:enabled="false"
             android:text = "2학년">
 
         </RadioButton>
@@ -44,4 +52,16 @@
         </RadioButton>
 
     </RadioGroup>
+
+    <ImageView
+
+        android:id = "@+id/picture"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:src = "@drawable/pic1"/>
+    <Button
+        android:id = "@+id/clickBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text = "다음사진"/>
 </LinearLayout>
