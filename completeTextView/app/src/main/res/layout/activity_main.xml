@@ -7,6 +7,7 @@
     android:orientation="vertical"
     tools:context=".MainActivity">
 
+    <!-- 자동완성 기능 구현 -->
     <AutoCompleteTextView
         android:hint = "자동완성텍스트뷰"
         android:completionThreshold="2"
@@ -22,4 +23,5 @@
         android:id = "@+id/multiAutoCompleteTextzView1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"/>
+    <!-- 여기까지 -->
 </LinearLayout>
