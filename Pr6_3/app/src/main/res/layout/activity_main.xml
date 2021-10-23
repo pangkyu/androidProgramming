@@ -2,45 +2,44 @@
 <TabHost xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:id = "@android:id/tabhost"
-    android:orientation="horizontal">
+    android:id = "@android:id/tabhost">
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
+        android:layout_height="match_parent"
+        android:orientation="vertical">
         <TabWidget
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id = "@android:id/tabs">
-        </TabWidget>
+            android:id = "@android:id/tabs"/>
+
         <FrameLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:id = "@android:id/tabcontent">
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="match_parent"
                 android:id = "@+id/tabSong"
-                android:background = "#f00000"
-                android:orientation="horizontal">
+                android:background = "@color/song"
+                android:orientation="vertical">
 
             </LinearLayout>
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="match_parent"
                 android:id="@+id/tabArtist"
-                android:background = "#f0f000"
-                android:orientation="horizontal">
+                android:background = "@color/artist"
+                android:orientation="vertical">
 
             </LinearLayout>
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="match_parent"
                 android:id = "@+id/tabAlbum"
-                android:background="#f000ff"
-                android:orientation="horizontal">
+                android:background="@color/album"
+                android:orientation="vertical">
 
             </LinearLayout>
 
