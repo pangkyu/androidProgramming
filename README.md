@@ -9,3 +9,4 @@
  7. [clock실습](Clock/README.md)
  8. [예약실습](Pr6_1/README.md)
  9. [TabHost실습](Pr6_3/README.md)
+ 10. [inflate](Project7_1/README.md)
