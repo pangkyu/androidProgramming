@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/base">
+
+    <Button
+        android:id = "@+id/baseBtn"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:text="기준 위젯"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true">
+    </Button>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text = "안드로이드 a반"
+        android:layout_alignLeft = "@+id/baseBtn"/>
+
+    <Button
+        android:id="@+id/myNum"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text = "201758101"
+        android:layout_toRightOf="@+id/baseBtn"
+        android:layout_above="@+id/baseBtn"/>
+
+    <Button
+        android:id = "@+id/myName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text = "배성규"
+        android:layout_alignTop="@+id/baseBtn"/>
+</RelativeLayout>
