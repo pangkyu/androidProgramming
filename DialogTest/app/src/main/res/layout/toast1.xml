@@ -10,7 +10,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/imageView1"
-        android:src="@drawable/btn_star_big_on"/>
+        android:src="@drawable/ic_menu_allfriends"/>
 
     <TextView
         android:layout_width="wrap_content"
@@ -23,5 +23,5 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/imageView2"
-        android:src="@drawable/btn_star_big_on"/>
+        android:src="@drawable/ic_menu_allfriends"/>
 </LinearLayout>

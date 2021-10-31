@@ -39,8 +39,27 @@ public class MainActivity extends AppCompatActivity {
                 dlg2.setTitle("사용자 정보 입력");
                 dlg2.setIcon(R.drawable.ic_menu_allfriends);
                 dlg2.setView(dialogView);
-                dlg2.setPositiveButton("확인", null);
-                dlg2.setNegativeButton("확인", null);
+                dlg2.setPositiveButton("확인", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialogInterface, int which) {
+                       dlgEdtName = (EditText) dialogView.findViewById(R.id.dlgEdt1);
+                       dlgEdtEmail = (EditText) dialogView.findViewById(R.id.dlgEdt2);
+                       tvName.setText(dlgEdtName.getText().toString());
+                       tvEmail.setText(dlgEdtEmail.getText().toString());
+                    }
+                });
+                dlg2.setNegativeButton("취소", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialogInterface, int which) {
+                        Toast toast = new Toast(MainActivity.this);
+                        toastView = View.inflate(MainActivity.this , R.layout.toast1, null);
+                        toastText = findViewById(R.id.toastText1);
+                        toastText.setText("취소했습니다.");
+                        toast.setView(toastView);
+                        toast.show();
+
+                    }
+                });
                 dlg2.show();
 
                 AlertDialog.Builder dlg = new AlertDialog.Builder(MainActivity.this);
