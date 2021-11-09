@@ -95,3 +95,10 @@ public class MainActivity extends AppCompatActivity {
    - Environment.getExternalStorageDirectory().getAbsolutePath(); // 절대경로를 알수있다. 
    -  FileInputStream inFs = new FileInputStream("/storage/emulated/0/file.txt"); // 다음과 같은 경로에 저장이 됨 
    
+ ---
+ 
+  - 특정 폴더의 하위 폴더 및 파일 목록
+    - 지정한 폴더의 하위 폴더 및 파일 목록에 접근하기 
+      ==> 특정폴더의 하위 폴더 및 파일 목록은 File.listFiles() 메소드 사용하여 접근
+          반환값 : File[] 형
+          
