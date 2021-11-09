@@ -99,3 +99,12 @@ DatePicker dp;
         android:enabled="false"
         android:id="@+id/btnWrite"/>
  ```
+ 
+ ---
+ 
+  - 파일 pc로 이동 
+    - pc로 가져올 파일을 선택하고 마우스 오른쪽 버튼 -> Save As를 선택하여 pc의 폴더를 지정한다. 
+  - raw 폴더 파일 처리 
+    - 프로젝트의 /res/raw 폴더에 필요한 파일을 저장해서 사용
+    - openRaw Resource() 메소드를 사용하여 접근(InputStream 클래스를 사용)
+    - 프로젝트의 /res/raw는 프로젝트에 포함된 폴더이기 때문에 읽기전용으로만 사용가능하다. 
