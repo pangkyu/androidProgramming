@@ -29,11 +29,11 @@ public class MainActivity extends AppCompatActivity {
                 try{
                     FileOutputStream outFs = openFileOutput("file.txt", Context.MODE_PRIVATE); // calling application
                     String str = "안드로이드a반 화이팅";
-                    outFs.write(str.getBytes(str));
+                    outFs.write(str.getBytes());
                     outFs.close();
                     Toast.makeText(getApplicationContext(),"file.txt가 생성되었습니다.", Toast.LENGTH_SHORT).show();
                 }catch(IOException e){
-
+                    e.printStackTrace();
                 }
             }
         });
