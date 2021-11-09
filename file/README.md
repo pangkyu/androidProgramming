@@ -102,3 +102,53 @@ public class MainActivity extends AppCompatActivity {
       ==> 특정폴더의 하위 폴더 및 파일 목록은 File.listFiles() 메소드 사용하여 접근
           반환값 : File[] 형
           
+       
+ --- 
+  - listFiles() 
+  
+  ```xml
+  
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/btnFilelist"
+        android:text="시스템 폴더의 폴더/파일 목록"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/edtFilelist"/>
+  ```
+
+  ```java
+    protected void onCreate(Bundle savedInstanceState){
+      super.onCreate(savedInstanceState);
+      setContentView(R.layout.activity_main);
+      ActivityCompat.requestPermissions(this, new String[]{android.Manifest.permission.WRITE_EXTERNAL_STORAGE}, MODE_PRIVATE);
+      
+      Button btnFilelist;
+      final EditText edtFilelist;
+      btnFilelist = findViewById(R.id.btnFilelist);
+      edtFilelist = (EditText)findViewById(R.id.edtFilelist);
+       
+      btnFilelist.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String sysDir = Environment.getRootDirectory().getAbsolutePath(); // 경로 구하는 구문
+                // File.listFiles()
+                File[] sysFiles = (new File(sysDir).listFiles()); // sysDir에 위차한 파일들의 리스트를 담을 배열생성
+                String strFname;
+                for (int i = 0; i< sysFiles.length; i++){ // for문 돌면서 디렉토리 == true ? 폴더 : 파일
+                    if(sysFiles[i].isDirectory() == true){
+                        strFname = "<폴더>" + sysFiles[i].toString();
+                    }else{
+                        strFname = "<파일>" + sysFiles[i].toString();
+                    }
+                    edtFilelist.setText(edtFilelist.getText() + "\n" + strFname);
+                }
+            }
+        });
+
+      
+      
+  ```
