@@ -18,6 +18,13 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".SecondActivity" android:label="second 액티비티">
+        </activity>
+        <activity android:name=".ThirdActivity" android:label="third 액티비티">
+        </activity>
+        <activity android:name=".RatingBarActivity" android:label="레이팅바 액티비티">
+
+        </activity>
     </application>
 
 </manifest>
