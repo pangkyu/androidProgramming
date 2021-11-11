@@ -72,7 +72,7 @@
         <RatingBar
             android:id="@+id/rbar5"
             style="?android:attr/ratingBarStyleIndicator"
-            android:layout_gravity5 = "right"/>
+            android:layout_gravity = "right"/>
 
 
     </TableRow>
