@@ -16,3 +16,4 @@
  14. [파일처리실습3](file/README.md)
  15. [액티비티실습1](activityPractice1/README.md)
  16. [액티비티실습2](Project10_2/README.md)
+ 17. [뷰실습](practiceView/README.md)
