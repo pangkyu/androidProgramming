@@ -69,4 +69,7 @@ public class SecondActivity extends Activity {
 }
      
 ```
-
+ ! 안드로이드에서는 사용될 액티비티를 AindroidManifest.xml에 꼭 등록해야한다. 
+ ! 메인 액티비티는 자동으로 등록되지만, 추가한 엑티비티는 별도로 등록해주어야한다. 
+ 
+---
