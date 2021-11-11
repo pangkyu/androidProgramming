@@ -69,7 +69,31 @@ public class SecondActivity extends Activity {
 }
      
 ```
- ! 안드로이드에서는 사용될 액티비티를 AindroidManifest.xml에 꼭 등록해야한다. 
- ! 메인 액티비티는 자동으로 등록되지만, 추가한 엑티비티는 별도로 등록해주어야한다. 
+ ! 안드로이드에서는 사용될 액티비티를 AindroidManifest.xml에 꼭 등록해야한다. 메인 액티비티는 자동으로 등록되지만, 추가한 엑티비티는 별도로 등록해주어야한다. 
  
+ ```xml
+   <!--AndroidManifest.xml -->
+   <manifest ...>
+     <application ...> 
+       <activity android:name = ".MainActivity" ....>
+        
+       </activity>
+    
+       <activity android:name = ".SecondActivity">
+       </activity>
+     </application>
+   </manifest>
+ ```
 ---
+
+ 3. 명시적 인텐트(Explicit Intent)
+   - 인텐트 
+     - 안드로이드 4대 컴포넌트가 상호 간에 데이터를 주고 받기 위한 메시지 객체 
+     - 명시적 인텐트와 암시적 인텐트로 구분 
+     ```java
+      Intent intent = new Intent(getApplication(onText(), SecondActivity.class);
+      startActivity(intent);
+     ```
+    - 명시적 인텐트와 데이터의 전달 
+      - 명시적 인텐트 : 다른 액티비티의 이름을 명확히 지정할 때 사용하는 방법 
+      
