@@ -18,6 +18,8 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".Poster" android:label="poster"/>
+        <activity android:name=".Dialog" android:label="dialog"/>
     </application>
 
 </manifest>
