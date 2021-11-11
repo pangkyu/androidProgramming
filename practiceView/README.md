@@ -18,3 +18,15 @@
                   android:layout_height = "wrap_content"/>
       </LinearLayout>
     ```
+
+  ---
+  - 리스트뷰의 동적 추가/삭제 
+    - 리스트뷰의 항목을 동적으로 추가/삭제 하려면 ArrayList<T>를 정의한 후 add()와 remove() 메소드를 사용
+ 
+ ---
+ 
+  - 그리드 뷰 
+     - 사진이나 그림을 격자 모야응로 배치 
+     - XML 파일에는 간단히 <GridView>를 넣으면 되지만, JAVA코드에는 필요한 내용을 반드시 코딩해야 한다. 
+     - 특히 <GridView>의 속성 중 열 개수를 지정하는 numColumns는 꼭 넣어야한다. 
+ 
