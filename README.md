@@ -17,3 +17,4 @@
  15. [액티비티실습1](activityPractice1/README.md)
  16. [액티비티실습2](Project10_2/README.md)
  17. [뷰실습](practiceView/README.md)
+ 18. [로그캣을이용하여생명주기확인](Project10_3/README.md)
