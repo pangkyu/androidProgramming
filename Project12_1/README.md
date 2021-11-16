@@ -31,3 +31,12 @@ generic_x86_arm:/data/data/kr.ac.hs.and2021.myapplication # mkdir databases
    mkdir databases로 데이터베이스 폴더를 생성하고 데이터베이스 폴더로 이동 
    
    
+   sqlite3 테이블명 입력
+
+.table을 입력하면 테이블이 무엇이 있는지 확인 가능 
+.schema 테이블명 ==> 테이블에 있는 형식 확인 가능
+   
+   
+ ---
+ 
+ 
