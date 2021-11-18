@@ -18,3 +18,4 @@
  16. [액티비티실습2](Project10_2/README.md)
  17. [뷰실습](practiceView/README.md)
  18. [로그캣을이용하여생명주기확인](Project10_3/README.md)
+ 19. [db이용](Project12_1/README.md)
