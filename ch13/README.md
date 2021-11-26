@@ -68,5 +68,13 @@
 ---
   리소스 파일과 저장 폴더 
   
-  |--|
-   -- 
+  그림파일(png, jpg, xml) - /res/drawable 
+  메뉴파일(xml) - /res/menu
+  기타 xml파일(xml) - /res/xml 
+  raw파일(mp3, mp4, txt...) - /res/raw
+  레이아웃 파일(xml) - /res/layout
+  문자열(string.xml) - /res/values
+  문자 배열(array.xml) - /res/values
+  색상값(colors.xml) - / res/values
+  스타일(style.xml) - /res/values
+  테마(themes.xml) - /res/values 
