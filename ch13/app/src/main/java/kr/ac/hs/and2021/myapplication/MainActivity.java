@@ -7,6 +7,7 @@ import android.Manifest;
 import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.os.Environment;
+import android.os.SystemClock;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
@@ -18,20 +19,23 @@ import android.widget.TextView;
 
 import java.io.File;
 import java.io.IOException;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
 
     ListView listViewMP3;
-    Button btnPlay, btnStop;
+    Button btnPlay, btnStop, btn;
     TextView tvMP3;
-    ProgressBar pbMP3;
+    ProgressBar pbMP3, pb1, pb2;
+
 
     ArrayList<String> mp3List;
     String selectedMP3;
 
     String mp3Path = Environment.getExternalStorageDirectory().getPath() + "/";
     MediaPlayer mPlayer;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -69,6 +73,47 @@ public class MainActivity extends AppCompatActivity {
             }
         });
         selectedMP3 = mp3List.get(0);
+
+        pb1 = (ProgressBar)findViewById(R.id.pb1);
+        pb2 = (ProgressBar)findViewById(R.id.pb2);
+        btn = (Button) findViewById(R.id.button1);
+
+
+        new Thread(){
+            public void run(){
+                for(int i = pb1.getProgress(); i<100; i+=2){
+                    pb1.setProgress(pb1.getProgress()+2);
+                    SystemClock.sleep(100);
+                }
+            }
+        }.start();
+
+        new Thread(){
+            public void run(){
+                for(int i = pb2.getProgress(); i<100; i++){
+                    pb2.setProgress(pb2.getProgress()+1);
+                    SystemClock.sleep(100);
+                }
+            }
+        }.start();
+
+        new Thread(){
+            SimpleDateFormat timeFormat = new SimpleDateFormat("mm:ss");
+            public void run(){
+                if(mPlayer == null) return;
+                pbMP3.setMax(mPlayer.getDuration());
+                while(mPlayer.isPlaying()){
+                    runOnUiThread(new Runnable() {
+                        @Override
+                        public void run() {
+                            pbMP3.setProgress(mPlayer.getCurrentPosition());
+                            tvTime.setText("진행 시간 : " + timeFormat.format(mPlayer.getCurrentPosition()))
+                        }
+                    });
+                    SystemClock.sleep(200);
+                }
+            }
+        }.start();
 
         btnPlay = (Button) findViewById(R.id.btnPlay);
         btnStop = (Button) findViewById(R.id.btnStop);

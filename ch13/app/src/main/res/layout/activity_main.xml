@@ -54,19 +54,45 @@
     <LinearLayout
         android:layout_width="fill_parent"
         android:layout_height="0dp"
-        android:layout_weight="1"
+        android:layout_weight="2"
         android:gravity="left|center"
-        android:orientation="horizontal">
+        android:orientation="vertical">
         <TextView
             android:id="@+id/tvMP3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="실행중인 음악 : "/>
-        <ProgressBar
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/tvTime"
+            android:text="진행시간 : "/>
+        <SeekBar
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:visibility="invisible"
             android:id="@+id/pbMP3"/>
 
+
     </LinearLayout>
+
+    <SeekBar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/pb1"
+        android:max="100"
+        android:progress="10"/>
+
+    <SeekBar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:max="100"
+        android:progress="10"
+        android:id="@+id/pb2"/>
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/button1"
+        android:text="스레드 시작"/>
+
 </LinearLayout>
