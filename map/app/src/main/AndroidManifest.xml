@@ -2,6 +2,15 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="kr.ac.hs.and2021.myapplication">
 
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+    <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES"/>
+    <uses-feature android:required="true" android:glEsVersion="0x00020000"/>
+    <permission android:name="kr.ac.hs.and2021.myapplication.permission.MAPS_RECEIVE" android:label="signature" ></permission>
+    <meta-data android:name = "com.google.android.gms.version" android:value = "12451000"/>
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -18,6 +27,8 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <meta-data android:name= "com.google.android.maps.v2.API_KEY" android:value="AIzaSyCvkBj1KFKIS1Ec6k2HxSVB1NAIjGkK8o4"/>
+        <uses-library android:name="org.apache.http.legacy" android:required="false"/>
     </application>
 
 </manifest>
