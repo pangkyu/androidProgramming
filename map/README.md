@@ -17,6 +17,12 @@
     <uses-feature android:required="true" android:glEsVersion="0x00020000"/>
     <permission android:name="kr.ac.hs.and2021.myapplication.permission.MAPS_RECEIVE" android:label="signature" ></permission>
     <meta-data android:name = "com.google.android.gms.version" android:value = "12451000"/>
+
+    <application>
+     ...
+      <meta-data android:name= "com.google.android.maps.v2.API_KEY" android:value="AIzaSyCvkBj1KFKIS1Ec6k2HxSVB1NAIjGkK8o4"/>
+        <uses-library android:name="org.apache.http.legacy" android:required="false"/>
+</application>
  ```
   위에 거 입력
  
